@@ -1,0 +1,105 @@
+@import "../../assets/scss/styles.scss";
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    
+    .modal-content {
+        position: relative;
+        z-index: 1;
+        max-width: 500px;
+        width: 100%;
+        padding: 20px 30px;
+        color: black;
+        background-color: white;
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 25px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .input-form {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                padding: 15px 15px;
+                border-radius: 5px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                margin-bottom: 15px;
+            }
+        }
+
+        .email-text {
+            font-size: 13px;
+            color: $main-color;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .date-text {
+            font-size: 10px;
+            color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 15px;
+        }
+
+        select {
+            padding: 15px 15px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+            background-color: white;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .date-form {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .month-select {
+            width: 45%;
+        }
+
+        .day-select,
+        .year-select {
+            width: 25%;
+        }
+
+        .next-btn {
+            display: inline-block;
+            width: 100%;
+            background-color: $main-color;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            text-align: center;
+            padding: 12px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+    }
+}
+

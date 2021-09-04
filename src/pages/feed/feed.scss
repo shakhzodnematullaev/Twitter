@@ -1,0 +1,363 @@
+@import "../../assets/scss/styles.scss";
+
+.profile-container {
+    display: flex;
+    align-items: stretch;
+    width: 1250px;
+    margin: 0 auto;
+
+    .menu-link {
+        text-decoration: none;
+        color: black;
+
+        &--active {
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+
+
+    .menu-box {
+        display: inline-block;
+        width: 20%;
+        padding-top: 20px;
+        position: fixed;
+        z-index: 2;
+
+        .menu-list {
+            list-style: none;
+            margin-top: 30px;
+
+            .m-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 25px;
+                font-size: 15px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        .t-btn {
+            display: block;
+            width: 75%;
+            background-color: $main-color;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            text-align: center;
+            padding: 12px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+
+        }
+
+        .profile-box {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            padding-right: 10px;
+
+            .dots {
+                font-size: 24px;
+                padding-bottom: 15px;
+                margin-left: auto;
+            }
+
+            img {
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            .link {
+                opacity: 0.6;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .tw-box {
+        display: inline-block;
+        width: 55%;
+        border-left: 1px solid #C4C4C4;
+        border-right: 1px solid #C4C4C4;
+        margin-left: 22%;
+
+        .home-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            border-bottom: 1px solid #C4C4C4;
+        }
+
+        .first-tweet-box,
+        .second-tweet-box,
+        .third-tweet-box,
+        .message-box {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 8px 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #C4C4C4;
+
+            div {
+                width: 530px;
+            }
+
+            .tweet-text {
+                width: 100%;
+                font-size: 13px;
+                margin-right: 15px;
+                margin-bottom: 20px;
+            }
+
+            .dots {
+                font-size: 24px;
+                padding: 0;margin: 0;
+            }
+
+            
+            .user-box {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                margin-bottom: 8px;
+
+                p {
+                    opacity: 0.6;
+                    margin-left: 8px;
+                }
+            }
+
+            .like-list {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                list-style: none;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    color: #536471;
+                    font-size: 13px;
+                    margin-right: 80px;
+
+                    img {
+                        width: 20px;
+                    }
+                }
+            }
+        }
+
+        .second-tweet-box {
+            .like-list {
+                li {
+                    &:nth-child(2) {
+                        color: #0CB245;
+                    }
+
+                    &:nth-child(3) {
+                        color: #EF1C5C;
+                    }
+                }
+            }
+        }
+
+        .third-tweet-box {
+
+            .shashlik {
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .message-box {
+            justify-content: start;
+
+            .avatar-img {
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            .tweet-text {
+                font-size: 16px;
+                color: black;
+                padding: 20px 8px 25px;
+                border: none;
+            }
+
+            .messaging-box {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                
+                .type-message-list {
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+
+                    li {
+                        margin-right: 10px;
+                    }
+                }
+
+                .t-btn {
+                    display: inline-block;
+                    width: 80px;
+                    background-color: $main-color;
+                    color: white;
+                    border: none;
+                    border-radius: 25px;
+                    text-align: center;
+                    padding: 12px;
+                    font-weight: bold;
+                    position: absolute;
+                    bottom: 3px;
+                    right: -30px;
+                    z-index: 1;
+                    opacity: 0.4;
+                }
+            }
+
+        }
+    }
+
+    .search-box {
+        display: inline-block;
+        width: 25%;
+        padding: 12px 20px;
+        position: fixed;
+        right: 0;
+        z-index: 1;
+
+        .search-form {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                content: "";
+                width: 13px;
+                height: 13px;
+                background-image: url("../../assets/photos/search.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: absolute;
+                left: 17px;
+                top: 11px;
+                z-index: 2;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px 40px;
+                background-color: #EFF3F4;
+                border-radius: 25px;
+                border: none;
+                color: #5C6C79;
+              
+            }
+        }
+
+        .likes {
+            background-color: #F7F9F9;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 8px 0;
+
+            h3 {
+                margin-bottom: 10px;
+            }
+
+            .like-list {
+                list-style: none;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    font-size: 13px;
+                    margin-bottom: 15px;
+
+                    img {
+                        width: 40px;
+                        margin-right: 10px;
+                    }
+
+                    button {
+                        margin-left: auto;
+                        background-color: black;
+                        border-radius: 40px;
+                        padding: 6px 10px;
+                        color: white;
+                        border: none;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+
+                    .link {
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+
+        .show-btn {
+            font-size: 13px;
+            color: $main-color;
+        }
+
+        .trend-box {
+            background-color: #F7F9F9;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 8px 0;
+
+            h3 {
+                margin-bottom: 12px;
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: space-between;
+                    margin-bottom: 15px;
+
+                    p {
+                        font-size: 13px;
+                        opacity: 0.6;
+                    }
+
+                    h4 {
+                        margin: 4px 0;
+                    }
+                }
+            }
+        }
+
+        .terms-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            color: #536471;
+            list-style: none;
+            font-size: 13px;
+
+            li {
+                margin-right: 8px;
+            }
+        }
+    }
+}
